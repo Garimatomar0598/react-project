@@ -1,15 +1,22 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 
+import {Route, Routes} from 'react-router-dom'
 import './App.css'
+import Home from './pages/Agence'
+import Agence from './pages/Agence'
+import Projects from './pages/projects'
 
 function App() {
 
 
   return (
     <>
-      
-  <h1 className='text-2xl text-white py-2 px-2 bg-blue-500'>Hey</h1> 
+<Routes>
+  <Route path='/' element={<Home />} />
+  <Route path='/agence' element={<Agence />} />
+   <Route path='/projects' element={<Projects />} />
+
+
+</Routes>
     </>
   )
 }
